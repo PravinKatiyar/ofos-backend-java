@@ -1,0 +1,63 @@
+2022-01-17 18:32:39,473 INFO com.pravin.onlinefoodordersys.OnlinefoodordersysApplication [restartedMain] Starting OnlinefoodordersysApplication using Java 11.0.11 on DESKTOP-TV14ERS with PID 888 (E:\Java_Workspace\JavaWorkspace\onlinefoodordersys\target\classes started by Pravin in E:\Java_Workspace\JavaWorkspace\onlinefoodordersys)
+2022-01-17 18:32:39,476 DEBUG com.pravin.onlinefoodordersys.OnlinefoodordersysApplication [restartedMain] Running with Spring Boot v2.6.1, Spring v5.3.13
+2022-01-17 18:32:39,476 INFO com.pravin.onlinefoodordersys.OnlinefoodordersysApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-01-17 18:32:45,256 DEBUG com.pravin.onlinefoodordersys.security.AuthenticationTokenFilter [restartedMain] Filter 'authenticationTokenFilterBean' configured for use
+2022-01-17 18:32:46,628 INFO com.pravin.onlinefoodordersys.OnlinefoodordersysApplication [restartedMain] Started OnlinefoodordersysApplication in 7.605 seconds (JVM running for 9.28)
+2022-01-17 18:47:25,214 INFO com.pravin.onlinefoodordersys.OnlinefoodordersysApplication [restartedMain] Starting OnlinefoodordersysApplication using Java 11.0.11 on DESKTOP-TV14ERS with PID 17656 (E:\Java_Workspace\JavaWorkspace\onlinefoodordersys\target\classes started by Pravin in E:\Java_Workspace\JavaWorkspace\onlinefoodordersys)
+2022-01-17 18:47:25,217 DEBUG com.pravin.onlinefoodordersys.OnlinefoodordersysApplication [restartedMain] Running with Spring Boot v2.6.1, Spring v5.3.13
+2022-01-17 18:47:25,217 INFO com.pravin.onlinefoodordersys.OnlinefoodordersysApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-01-17 18:47:32,747 DEBUG com.pravin.onlinefoodordersys.security.AuthenticationTokenFilter [restartedMain] Filter 'authenticationTokenFilterBean' configured for use
+2022-01-17 18:47:35,280 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.pravin.onlinefoodordersys.OnlinefoodordersysApplication.main(OnlinefoodordersysApplication.java:23)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.NullPointerException: null
+	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:110)
+	at com.google.common.collect.ComparatorOrdering.compare(ComparatorOrdering.java:38)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:234)
+	at java.base/java.util.Arrays.sort(Arrays.java:1441)
+	at com.google.common.collect.Ordering.sortedCopy(Ordering.java:817)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:52)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper$2.apply(DocumentationPluginsBootstrapper.java:129)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper$2.apply(DocumentationPluginsBootstrapper.java:126)
+	at com.google.common.collect.Iterators$8.transform(Iterators.java:799)
+	at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:48)
+	at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:48)
+	at com.google.common.collect.Iterators$5.hasNext(Iterators.java:548)
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:268)
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:226)
+	at com.google.common.collect.FluentIterable.toList(FluentIterable.java:373)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.defaultContextBuilder(DocumentationPluginsBootstrapper.java:100)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.buildContext(DocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:154)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 19 common frames omitted
+2022-01-17 18:50:06,862 INFO com.pravin.onlinefoodordersys.OnlinefoodordersysApplication [restartedMain] Starting OnlinefoodordersysApplication using Java 11.0.11 on DESKTOP-TV14ERS with PID 17272 (E:\Java_Workspace\JavaWorkspace\onlinefoodordersys\target\classes started by Pravin in E:\Java_Workspace\JavaWorkspace\onlinefoodordersys)
+2022-01-17 18:50:06,865 DEBUG com.pravin.onlinefoodordersys.OnlinefoodordersysApplication [restartedMain] Running with Spring Boot v2.5.7, Spring v5.3.13
+2022-01-17 18:50:06,866 INFO com.pravin.onlinefoodordersys.OnlinefoodordersysApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-01-17 18:50:15,412 DEBUG com.pravin.onlinefoodordersys.security.AuthenticationTokenFilter [restartedMain] Filter 'authenticationTokenFilterBean' configured for use
+2022-01-17 18:50:18,609 INFO com.pravin.onlinefoodordersys.OnlinefoodordersysApplication [restartedMain] Started OnlinefoodordersysApplication in 12.245 seconds (JVM running for 14.205)
+2022-01-17 18:52:37,004 INFO com.pravin.onlinefoodordersys.OnlinefoodordersysApplication [restartedMain] Starting OnlinefoodordersysApplication using Java 11.0.11 on DESKTOP-TV14ERS with PID 17272 (E:\Java_Workspace\JavaWorkspace\onlinefoodordersys\target\classes started by Pravin in E:\Java_Workspace\JavaWorkspace\onlinefoodordersys)
+2022-01-17 18:52:37,005 DEBUG com.pravin.onlinefoodordersys.OnlinefoodordersysApplication [restartedMain] Running with Spring Boot v2.5.7, Spring v5.3.13
+2022-01-17 18:52:37,005 INFO com.pravin.onlinefoodordersys.OnlinefoodordersysApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-01-17 18:52:39,806 INFO com.pravin.onlinefoodordersys.OnlinefoodordersysApplication [restartedMain] Started OnlinefoodordersysApplication in 2.888 seconds (JVM running for 155.403)
